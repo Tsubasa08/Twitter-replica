@@ -1,7 +1,18 @@
-<% provide(:title, "Home")%>
     <h1>Sample App</h1>
     <p>
       This is the home page for the
       <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
       sample application.
     </p>
+    <div id="box-wrapper">
+      <div class="red"></div>
+      <div class="blue"></div>
+      <div class="green"></div>
+    </div>
+
+    <script type="text/javascript">
+      $('#box-wrapper div').click(function() {
+        $(this).fadeOut(500);
+      });
+      console.log('hello, world');
+    </script>
