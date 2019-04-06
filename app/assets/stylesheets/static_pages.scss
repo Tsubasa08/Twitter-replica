@@ -7,30 +7,39 @@ $green: green;
 }
 
 #box-wrapper {
+  position: relative;
   height: 200px;
   width: 90%;
   margin: 50px auto 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  padding: 20px 50px;
   background-color: #eee;
   > div {
+    position: absolute;
     height: 100px;
     width: 100px;
   }
   .red {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
     background-color: $red;
     &:hover {
       @include dark($red);
     }
   } 
   .blue {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
     background-color: $blue;
     &:hover {
       @include dark($blue);
     }
   } 
   .green {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
     background-color: $green;
     &:hover {
       @include dark($green);

@@ -13,7 +13,7 @@
 <%= link_to image_tag("rails.png", alt: "Rails logo"),
             'http://rubyonrails.org/' %>
 
-<div id="box-wrapper">
+    <div id="box-wrapper">
       <div class="red"></div>
       <div class="blue"></div>
       <div class="green"></div>
@@ -21,7 +21,7 @@
 
     <script type="text/javascript">
       $('#box-wrapper div').click(function() {
-        $(this).fadeOut(500);
+        $(this).slideToggle(500);
       });
       console.log('hello, world');
     </script>
