@@ -1,0 +1,51 @@
+#box-wrapper {
+  position: relative;
+  height: 200px;
+  width: 90%;
+  margin: 50px auto 0;
+  padding: 20px 50px;
+  background-color: #eee;
+}
+
+#box-wrapper > div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+}
+
+#box-wrapper .red {
+  top: 50%;
+  right: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: red;
+}
+
+#box-wrapper .red:hover {
+  background-color: #990000;
+}
+
+#box-wrapper .blue {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  background-color: blue;
+}
+
+#box-wrapper .blue:hover {
+  background-color: #000099;
+}
+
+#box-wrapper .green {
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: green;
+}
+
+#box-wrapper .green:hover {
+  background-color: #001a00;
+}
+/*# sourceMappingURL=static_pages.css.map */

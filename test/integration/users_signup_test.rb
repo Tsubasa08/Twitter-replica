@@ -17,8 +17,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'li', "Email is invalid"
     assert_select 'li', "Password is too short (minimum is 6 characters)"
     assert_select 'li', "Password confirmation doesn't match Password"
-    assert_select "form[action=?]", signup_path
-    # assert_select 'form[action="/signup"]' 上記テストはこのコードでも可能
+    assert_select 'form[action="/signup"]'
   end
 
   test "acsept user" do
