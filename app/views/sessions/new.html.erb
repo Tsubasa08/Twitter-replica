@@ -16,6 +16,8 @@
         <span>Remember me on this computer</span>
       <% end %>
 
+      <%= f.file_field :images, multiple: true %>
+
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
 
