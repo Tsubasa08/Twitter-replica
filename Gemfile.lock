@@ -43,7 +43,11 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
     ansi (1.5.0)
+    archive-zip (0.12.0)
+      io-like (~> 0.3.0)
     arel (9.0.0)
     autoprefixer-rails (9.5.0)
       execjs
@@ -58,10 +62,24 @@ GEM
       will_paginate
     builder (3.2.3)
     byebug (11.0.1)
+    capybara (3.20.0)
+      addressable
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (~> 1.2)
+      uglifier
+      xpath (~> 3.2)
     carrierwave (1.3.1)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    childprocess (1.0.1)
+      rake (< 13.0)
+    chromedriver-helper (2.1.1)
+      archive-zip (~> 0.10)
+      nokogiri (~> 1.8)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -263,6 +281,7 @@ GEM
       domain_name (~> 0.5)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    io-like (0.3.0)
     ipaddress (0.8.3)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
@@ -315,6 +334,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
     rack-test (1.1.0)
@@ -359,6 +379,7 @@ GEM
       json (>= 1.8)
       nokogiri (~> 1.5)
       optimist (~> 3.0)
+    regexp_parser (1.5.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -382,6 +403,7 @@ GEM
     rspec-support (3.8.2)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
+    rubyzip (1.2.2)
     sass (3.7.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -393,6 +415,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    selenium-webdriver (3.142.2)
+      childprocess (>= 0.5, < 2.0)
+      rubyzip (~> 1.2, >= 1.2.2)
     shellany (0.0.1)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -430,6 +455,8 @@ GEM
     will_paginate (3.1.7)
     xml-simple (1.1.5)
     xmlrpc (0.3.0)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
@@ -440,7 +467,9 @@ DEPENDENCIES
   bootstrap-sass (>= 3.3.7)
   bootstrap-will_paginate (>= 1.0.0)
   byebug
+  capybara
   carrierwave (>= 1.2.2)
+  chromedriver-helper
   coffee-rails (~> 4.2)
   factory_bot_rails
   faker (>= 1.7.3)
@@ -459,6 +488,7 @@ DEPENDENCIES
   rails-controller-testing (>= 1.0.2)
   rspec-rails
   sass-rails (~> 5.0)
+  selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
